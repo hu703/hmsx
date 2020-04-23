@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理页面</title>
-    <link rel="stylesheet" href='{{ url_for("static",filename="/css/bootstrap.min.css") }}'>
-    <!-- <link rel="stylesheet" href='{{ url_for("static",filename="/css/bootstrap.min.css.map") }}'> -->
+    <link rel="stylesheet" href='{{ buildStaticUrl("/css/bootstrap.min.css") }}'>
     {% block css %}{% endblock %}
     <style>
         *{
@@ -17,7 +16,7 @@
     {% block content %}{% endblock %}
 
 
-    <script src="{{ url_for('static',filename='/plugin/jquery-3.5.0.min.js') }}"></script>
+    <script src="{{ buildStaticUrl('/plugin/jquery-3.5.0.min.js') }}"></script>
     {% block js %}{% endblock %}
 </body>
 </html>
