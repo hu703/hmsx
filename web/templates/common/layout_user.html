@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面</title>
+    <link rel="stylesheet" href='{{ url_for("static",filename="/css/bootstrap.min.css") }}'>
+    <!-- <link rel="stylesheet" href='{{ url_for("static",filename="/css/bootstrap.min.css.map") }}'> -->
+    {% block css %}{% endblock %}
+    <style>
+        *{
+            font-family: 幼圆;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+
+    <script src="{{ url_for('static',filename='/plugin/jquery-3.5.0.min.js') }}"></script>
+    {% block js %}{% endblock %}
+</body>
+</html>
